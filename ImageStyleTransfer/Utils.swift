@@ -53,3 +53,40 @@ extension CVPixelBuffer {
         return output
     }
 }
+
+extension CGContext {
+    static func createContext(for pixelBuffer: CVPixelBuffer) -> CGContext? {
+        return CGContext(data: pixelBuffer.baseAddress, width: pixelBuffer.width, height: pixelBuffer.height, bitsPerComponent: 8, bytesPerRow: pixelBuffer.bytesPerRow, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: CGBitmapInfo.byteOrder32Little.rawValue | CGImageAlphaInfo.noneSkipFirst.rawValue)
+    }
+    
+    func makeUIImage() -> UIImage? {
+        if let cgImage = self.makeImage() {
+            return UIImage(cgImage: cgImage)
+        }
+        
+        return nil
+    }
+}
+
+extension CGSize: CustomStringConvertible {
+    public var description: String {
+        return "\(self.width) * \(self.height)"
+    }
+}
+
+extension UIButton {
+    func enable() {
+        self.isEnabled = true
+        self.backgroundColor = UIColor.systemBlue
+    }
+    
+    func disable() {
+        self.isEnabled = false
+        self.backgroundColor = UIColor.lightGray
+    }
+}
+
+extension UIBarButtonItem {
+    func enable() {self.isEnabled = true }
+    func disable() { self.isEnabled = false }
+}

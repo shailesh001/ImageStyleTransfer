@@ -27,8 +27,16 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="NSTDemo" id="gfm-aK-UZj">
-                                        <barButtonItem key="leftBarButtonItem" title="Select" id="ZFh-sJ-rOP"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="cJ9-KQ-SLh"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Select" id="ZFh-sJ-rOP">
+                                            <connections>
+                                                <action selector="selectButtonPressed:" destination="BYZ-38-t0r" id="l2d-sS-ee0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="cJ9-KQ-SLh">
+                                            <connections>
+                                                <action selector="shareButtonPressed:" destination="BYZ-38-t0r" id="ZdK-ZJ-HQ7"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -51,6 +59,9 @@
                                 <state key="normal" title="Transfer Style">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="transferStyleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rXT-Ah-Y1B"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -73,6 +84,12 @@
                             <constraint firstItem="gZB-Vx-enN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="zdF-HN-yzG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="JKj-mx-lfF" id="TcO-Ce-JKt"/>
+                        <outlet property="modelSelector" destination="gZB-Vx-enN" id="Cxy-zN-GEf"/>
+                        <outlet property="shareButton" destination="cJ9-KQ-SLh" id="Clb-XQ-80L"/>
+                        <outlet property="transferStyleButton" destination="sx5-dm-TB1" id="wZF-we-Ivs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
