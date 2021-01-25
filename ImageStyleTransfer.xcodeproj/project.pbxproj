@@ -15,6 +15,9 @@
 		F2A4A73125BEECFD005A496D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A4A72F25BEECFD005A496D /* LaunchScreen.storyboard */; };
 		F2A4A73C25BEECFD005A496D /* ImageStyleTransferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4A73B25BEECFD005A496D /* ImageStyleTransferTests.swift */; };
 		F2A4A74725BEECFD005A496D /* ImageStyleTransferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4A74625BEECFD005A496D /* ImageStyleTransferUITests.swift */; };
+		F2A4A75825BF035D005A496D /* StyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4A75725BF035D005A496D /* StyleModel.swift */; };
+		F2A4A75D25BF0511005A496D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4A75C25BF0511005A496D /* Image.swift */; };
+		F2A4A76225BF132B005A496D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4A76125BF132B005A496D /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		F2A4A74225BEECFD005A496D /* ImageStyleTransferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageStyleTransferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A4A74625BEECFD005A496D /* ImageStyleTransferUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStyleTransferUITests.swift; sourceTree = "<group>"; };
 		F2A4A74825BEECFD005A496D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2A4A75725BF035D005A496D /* StyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModel.swift; sourceTree = "<group>"; };
+		F2A4A75C25BF0511005A496D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		F2A4A76125BF132B005A496D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				F2A4A72D25BEECFD005A496D /* Assets.xcassets */,
 				F2A4A72F25BEECFD005A496D /* LaunchScreen.storyboard */,
 				F2A4A73225BEECFD005A496D /* Info.plist */,
+				F2A4A75725BF035D005A496D /* StyleModel.swift */,
+				F2A4A75C25BF0511005A496D /* Image.swift */,
+				F2A4A76125BF132B005A496D /* Utils.swift */,
 			);
 			path = ImageStyleTransfer;
 			sourceTree = "<group>";
@@ -259,8 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2A4A72925BEECFD005A496D /* ViewController.swift in Sources */,
+				F2A4A75825BF035D005A496D /* StyleModel.swift in Sources */,
 				F2A4A72525BEECFD005A496D /* AppDelegate.swift in Sources */,
 				F2A4A72725BEECFD005A496D /* SceneDelegate.swift in Sources */,
+				F2A4A75D25BF0511005A496D /* Image.swift in Sources */,
+				F2A4A76225BF132B005A496D /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
