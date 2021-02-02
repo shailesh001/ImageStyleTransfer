@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F21D8EF125C837380031C43A /* StyleTransferModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F21D8EF025C837370031C43A /* StyleTransferModel.mlmodel */; };
 		F2A4A72525BEECFD005A496D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4A72425BEECFD005A496D /* AppDelegate.swift */; };
 		F2A4A72725BEECFD005A496D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4A72625BEECFD005A496D /* SceneDelegate.swift */; };
 		F2A4A72925BEECFD005A496D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4A72825BEECFD005A496D /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F21D8EF025C837370031C43A /* StyleTransferModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = StyleTransferModel.mlmodel; sourceTree = "<group>"; };
 		F2A4A72125BEECFD005A496D /* ImageStyleTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageStyleTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A4A72425BEECFD005A496D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2A4A72625BEECFD005A496D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		F2A4A72325BEECFD005A496D /* ImageStyleTransfer */ = {
 			isa = PBXGroup;
 			children = (
+				F21D8EF025C837370031C43A /* StyleTransferModel.mlmodel */,
 				F2A4A72425BEECFD005A496D /* AppDelegate.swift */,
 				F2A4A72625BEECFD005A496D /* SceneDelegate.swift */,
 				F2A4A72825BEECFD005A496D /* ViewController.swift */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2A4A72925BEECFD005A496D /* ViewController.swift in Sources */,
+				F21D8EF125C837380031C43A /* StyleTransferModel.mlmodel in Sources */,
 				F2A4A75825BF035D005A496D /* StyleModel.swift in Sources */,
 				F2A4A72525BEECFD005A496D /* AppDelegate.swift in Sources */,
 				F2A4A72725BEECFD005A496D /* SceneDelegate.swift in Sources */,

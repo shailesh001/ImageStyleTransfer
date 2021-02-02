@@ -101,7 +101,10 @@ extension ViewController: UIImagePickerControllerDelegate {
     }
     
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        inputImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        let rawImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        
+        //inputImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        inputImage = rawImage?.aspectFilled(to: modelSelection.constraints)
         
         outputImage = nil
         picker.dismiss(animated: true)

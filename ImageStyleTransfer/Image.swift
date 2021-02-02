@@ -12,6 +12,7 @@ extension UIImage {
     
     // Attempts Neural Style Transfer upon UIImage witg given .mlmodel and input options
     func styled(with modelSelection: StyleModel) -> UIImage? {
+        /*
         guard let cgImage = self.cgImage else { return nil }
         
         let orientation: UIImage.Orientation
@@ -23,6 +24,22 @@ extension UIImage {
         }
         
         return UIImage(cgImage: cgImage, scale: self.scale, orientation: orientation)
+        */
+        guard let inputPixelBuffer = self.pixelBuffer() else { return nil }
+        
+        let model = modelSelection.model
+        let styleArray = modelSelection.styleArray
+        let transformation = try? model.prediction(image: inputPixelBuffer, index: styleArray)
+        
+        guard let outputPixelBuffer = transformation?.stylizedImage else { return nil }
+        
+        let outputImage = outputPixelBuffer.perform(permission: .readOnly) {
+            guard let outputContext = CGContext.createContext(for: outputPixelBuffer) else { return nil }
+            
+            return outputContext.makeUIImage()
+        } as UIImage?
+        
+        return outputImage
     }
     
     func aspectFilled(to size: CGSize) -> UIImage? {
